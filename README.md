@@ -1,9 +1,12 @@
 # Cinemx
 A complete React js movie application.
 
-#Screenshot
-"C:\Users\yadav\Pictures\Screenshots\Screenshot (96).png"
-"C:\Users\yadav\Pictures\Screenshots\Screenshot (97).png"
+## 🎬 Live Demo
+**[Visit Live Demo →](https://movie-web-application-sigma.vercel.app/)**
+
+## 📸 Screenshots
+![Screenshot 1](https://via.placeholder.com/800x400?text=Cinemx+Screenshot+1)
+![Screenshot 2](https://via.placeholder.com/800x400?text=Cinemx+Screenshot+2)
 
 ---
 
