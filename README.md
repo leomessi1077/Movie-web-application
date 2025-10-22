@@ -1,7 +1,9 @@
 # Cinemx
 A complete React js movie application.
 
-
+#Screenshot
+"C:\Users\yadav\Pictures\Screenshots\Screenshot (96).png"
+"C:\Users\yadav\Pictures\Screenshots\Screenshot (97).png"
 
 ---
 

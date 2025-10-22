@@ -56,12 +56,22 @@ const Header = () => {
 
     const searchQueryHandler = (event)=>{
       //if user type search query and press enter, and search query not empty, then api call
-      if(event.key === 'Enter' && query.length >0 ){
+      if(event.key === 'Enter' && query.length > 0 ){
           navigate(`/search/${query}`);
-
+          setQuery("");
           setTimeout(()=>{
             setShowSearch(false)
           },1000)
+      }
+    }
+
+    const handleSearchClick = () => {
+      if(query.length > 0){
+        navigate(`/search/${query}`);
+        setQuery("");
+        setTimeout(()=>{
+          setShowSearch(false)
+        },1000)
       }
     }
 
@@ -96,8 +106,15 @@ const Header = () => {
          { showSearch && <div className="searchBar">
             <ContentWrapper>
             <div className="searchInput">
-              <input type="text" placeholder='Search for movie or TV show..' onChange={(e)=> setQuery(e.target.value)} onKeyUp={searchQueryHandler}/>
-              <VscChromeClose onClick={()=>{setShowSearch(false)}}/>
+              <input 
+                type="text" 
+                placeholder='Search for movie or TV show..' 
+                value={query}
+                onChange={(e)=> setQuery(e.target.value)} 
+                onKeyUp={searchQueryHandler}
+                autoFocus
+              />
+              <VscChromeClose onClick={()=>{setShowSearch(false); setQuery("");}}/>
             </div>
             </ContentWrapper>
           </div>}

@@ -15,10 +15,16 @@ const useFetch = (url) => {
         fetchDataFromApi(url)
             .then((res) => {
                 setLoading(false);//after calling api, loading stop
-                setData(res);
+                if (res && res.results) {
+                    setData(res);
+                } else {
+                    console.error("No data received from API for:", url);
+                    setError("Failed to load data. Check console for details.");
+                }
             })
             .catch((err) => {
                 setLoading(false);
+                console.error("Fetch error:", err);
                 setError("Something went wrong!");
             });
     }, [url]);

@@ -1,0 +1,61 @@
+.errorMessage {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    
+    .errorContent {
+        background: rgba(255, 0, 0, 0.1);
+        border: 2px solid rgba(255, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 30px;
+        max-width: 600px;
+        color: white;
+        
+        h2 {
+            color: #ff4444;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .errorHelp {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            
+            h3 {
+                color: #ffaa00;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+            
+            ul {
+                margin: 0;
+                padding-left: 20px;
+                
+                li {
+                    margin: 8px 0;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    
+                    code {
+                        background: rgba(255, 255, 255, 0.1);
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                        color: #4fc3f7;
+                        font-family: 'Courier New', monospace;
+                    }
+                }
+            }
+        }
+    }
+}
+

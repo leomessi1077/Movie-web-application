@@ -27,7 +27,9 @@ const HeroBanner = () => {
   }
 
   const searchItem = () =>{
-    navigate(`/search/${query}`)
+    if(query.length > 0){
+      navigate(`/search/${query}`)
+    }
   }
 
   return (
@@ -46,8 +48,14 @@ const HeroBanner = () => {
             <span className="title">Welcome</span>
             <span className="subTitle">The ultimate destination for movie lovers. Explore Now..</span>
             <div className="searchInput">
-              <input type="text" placeholder='Search for movie or TV show..' onChange={(e)=> setQuery(e.target.value)} onKeyUp={searchQueryHandler}/>
-              <button >Search</button>
+              <input 
+                type="text" 
+                placeholder='Search for movie or TV show..' 
+                value={query}
+                onChange={(e)=> setQuery(e.target.value)} 
+                onKeyUp={searchQueryHandler}
+              />
+              <button onClick={searchItem}>Search</button>
             </div>
           </div>
         </div>
